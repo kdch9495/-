@@ -1,0 +1,16 @@
+def solution(cpr):
+	answer = []
+	basic_order = ["check", "call", "pressure", "respiration", "repeat"]
+	for action in cpr:
+		print(action)
+		for i in range(len(basic_order)):
+			if action == basic_order[i]:
+				print(action, basic_order[i], basic_order.index(action)+1)
+				answer.append(basic_order.index(action)+1)
+	return answer
+
+input_list = [
+	["call", "respiration", "repeat", "check", "pressure"]
+]
+
+print(solution(input_list[0]))
